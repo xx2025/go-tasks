@@ -1,4 +1,4 @@
-## 1、项目介绍
+## 项目介绍
 基于golang开发的分布式任务调度中心、进程管理中心
 
 ## 项目特色
@@ -11,8 +11,24 @@
 
 ![架构模式](./resource/system/go-tasks.png)
 
-## 2、启动方式
-
+## 启动方式
+- **启动master**
+```
+    cd ./cmd
+    go run master.go
+```
+- **启动node**
+```a
+    cd ./cmd
+    go run node.go
+```
+- cd ./cmd && go run node.go
+- **启动web**
+```
+    cd ./web
+    pnpm install
+    npm run dev
+```
 
 ## WEB界面图
 ![node](./resource/system/node.png)![project](./resource/system/project.png)
