@@ -1,4 +1,4 @@
-## go-tasks
+## 1、项目介绍
 基于golang开发的分布式任务调度中心、进程管理中心
 
 ## 项目特色
@@ -11,13 +11,8 @@
 
 ![架构模式](./resource/system/go-tasks.png)
 
-## WEB界面图
-<img src="./resource/system/node.png" width="400px" alt="图片描述"> 
-<img src="./resource/system/project.png" width="400px"> 
-<img src="./resource/system/task.png" width="200px"> 
-<img src="./resource/system/task_logs.png" width="200px">
-<img src="./resource/system/process.png" width="200px">
-<img src="./resource/system/process_detail.png" width="200px">
+## 2、启动方式
+
 
 ## WEB界面图
 ![node](./resource/system/node.png)![project](./resource/system/project.png)
