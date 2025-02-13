@@ -1,0 +1,115 @@
+syntax = "proto3";
+
+package service;
+
+option go_package = "./grpc/service;service";
+
+service Node {
+  rpc Ping (pingRequest) returns (pingResponse);
+  rpc TaskExec (TaskExecRequest) returns (TaskExecResponse);   //执行任务
+  rpc TaskExecPID (TaskExecPIDRequest) returns (TaskExecPIDResponse);  //获取任务pid
+  rpc TaskExecStop (TaskExecStopRequest) returns (TaskExecStopResponse); //停止任务
+
+
+  rpc ProcessStart (ProcessStartRequest) returns (ProcessStartResponse); //启动进程
+  rpc ProcessStop (ProcessStopRequest) returns (ProcessStopResponse);
+  rpc ProcessInfo (ProcessInfoRequest) returns (ProcessInfoResponse);
+}
+
+
+
+// 请求消息
+message pingRequest {
+  string message = 1;
+}
+
+// 响应消息
+message pingResponse {
+  int64 code = 1;
+  string message = 2;
+}
+
+
+// 请求消息
+message TaskExecRequest {
+  int64 taskId = 1;
+  int64 logId = 2;
+  string command = 3;
+  int64 isSingle = 4;
+}
+
+// 响应消息
+message TaskExecResponse {
+  int64 code = 1;
+  string message = 2;
+}
+
+// 请求消息
+message TaskExecPIDRequest {
+  int64 taskId = 1;
+}
+
+// 响应消息
+message TaskExecPIDResponse {
+  int64 code = 1;
+  string message = 2;
+
+  message data {
+    int64 pid = 1;
+  }
+  data Data = 3;
+}
+
+// 请求消息
+message TaskExecStopRequest {
+  int64 taskId = 1;
+}
+
+// 响应消息
+message TaskExecStopResponse {
+  int64 code = 1;
+  string message = 2;
+}
+
+
+// 请求消息
+message ProcessStartRequest {
+  int64 processId = 1;
+  string processCommand = 2;
+  uint64 maxRetries = 3;  //最大重试次数
+}
+
+// 响应消息
+message ProcessStartResponse {
+  int64 code = 1;
+  string message = 2;
+}
+
+
+// 请求消息
+message ProcessStopRequest {
+  int64 processId = 1;
+}
+
+// 响应消息
+message ProcessStopResponse {
+  int64 code = 1;
+  string message = 2;
+}
+
+
+// 请求消息
+message ProcessInfoRequest {
+  int64 processId = 1;
+}
+
+// 响应消息
+message ProcessInfoResponse {
+  int64 code = 1;
+  string message = 2;
+  message data {
+    int64 pid = 1;
+  }
+  data Data = 3;
+}
+

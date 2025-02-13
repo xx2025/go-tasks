@@ -1,0 +1,53 @@
+syntax = "proto3";
+
+package service;
+
+option go_package = "./grpc/service;service";
+
+service Master {
+  rpc NodeRegister (NodeRegisterRequest) returns (NodeRegisterResponse);  //节点注册
+  rpc TaskExecRes (TaskExecResRequest) returns (TaskExecResResponse);  //任务执行结果
+  rpc ProcessNotice (ProcessNoticeRequest) returns (ProcessNoticeResponse);  //任务执行结果
+}
+
+
+
+
+// 请求消息
+message TaskExecResRequest {
+  int64 taskId = 1;
+  int64 logId = 2;
+  int64 taskStatus = 3;   // 0：等待执行， 1：执行完成， -1： 错误信息
+  string message = 4;
+}
+
+// 响应消息
+message TaskExecResResponse {
+  int64 code = 1;
+  string message = 2;
+}
+
+
+// 请求消息
+message ProcessNoticeRequest {
+  int64 processId = 1;
+  string message = 2;
+}
+
+// 响应消息
+message ProcessNoticeResponse {
+  int64 code = 1;
+  string message = 2;
+}
+
+// 请求消息
+message NodeRegisterRequest {
+  string name = 1;
+  string host = 2;
+}
+
+// 响应消息
+message NodeRegisterResponse {
+  int64 code = 1;
+  string message = 2;
+}

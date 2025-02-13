@@ -1,0 +1,10 @@
+name = "127.0.0.1:50051"
+#Grpc服务监听的端口
+grpc-port = 50051
+#grpc地址， 配置后， 当节点重启时会主动通知到master
+host = "127.0.0.1:50051"
+
+#master的grpc地址
+master-grpc-host = "127.0.0.1:50050"
+
+
