@@ -9,7 +9,7 @@
 
 - **内置进程管理**：内置守护进程管理功能，轻松应对若干异步进程需求。
 
-![架构模式](./resource/system/go-tasks.png)
+![架构模式](https://raw.githubusercontent.com/xx2025/go-tasks/refs/heads/main/resource/system/go-tasks.png)
 
 ## 启动方式
 - **启动master**
@@ -22,7 +22,6 @@
     cd ./cmd
     go run node.go
 ```
-- cd ./cmd && go run node.go
 - **启动web**
 ```
     cd ./web
@@ -31,9 +30,10 @@
 ```
 
 ## WEB界面图
-![node](./resource/system/node.png)![project](./resource/system/project.png)
-![task](./resource/system/task.png)
-![task-logs](./resource/system/task_logs.png)
-![process](./resource/system/process.png)
-![process_detail](./resource/system/process_detail.png)
+![node](https://raw.githubusercontent.com/xx2025/go-tasks/refs/heads/main/resource/system/node.png)
+![project](https://raw.githubusercontent.com/xx2025/go-tasks/refs/heads/main/resource/system/project.png)
+![task](https://raw.githubusercontent.com/xx2025/go-tasks/refs/heads/main/resource/system/task.png)
+![task-logs](https://raw.githubusercontent.com/xx2025/go-tasks/refs/heads/main/resource/system/task_logs.png)
+![process](https://raw.githubusercontent.com/xx2025/go-tasks/refs/heads/main/resource/system/process.png)
+![process_detail](https://raw.githubusercontent.com/xx2025/go-tasks/refs/heads/main/resource/system/process_detail.png)
 
