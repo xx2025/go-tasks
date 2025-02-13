@@ -1,0 +1,6 @@
+2025-02-13 14:32:15	error	scheduler/grpc_client.go:83	rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing: dial tcp 127.0.0.1:50051: connectex: No connection could be made because the target machine actively refused it."
+go-tasks/internal/scheduler.ProcessStart
+	D:/Workspace/go/go-tasks/internal/scheduler/grpc_client.go:83
+go-tasks/internal/scheduler.LoadProcess
+	D:/Workspace/go/go-tasks/internal/scheduler/process.go:20
+
