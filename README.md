@@ -12,6 +12,13 @@
 ![架构模式](https://raw.githubusercontent.com/xx2025/go-tasks/refs/heads/main/resource/system/go-tasks.png)
 
 ## 启动方式
+- **导入数据结构**
+```
+    go-tasks.sql， 账号密码：root:123456
+    配置 master.config.toml
+    配置 node.config.toml
+```
+    
 - **启动master**
 ```
     cd ./cmd
