@@ -1,4 +1,4 @@
-mode = "debug"
+mode = "release"
 name = "go-tasks"
 host = "http://127.0.0.1:8086"
 grpc-port = 50050
